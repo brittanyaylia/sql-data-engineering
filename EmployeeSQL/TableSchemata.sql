@@ -53,17 +53,11 @@ CREATE TABLE "Salaries" (
 ALTER TABLE "Department_Manager" ADD CONSTRAINT "fk_Department_Manager_dept_no" FOREIGN KEY("dept_no")
 REFERENCES "Department_Emp" ("dept_no");
 
-ALTER TABLE "Department_Manager" ADD CONSTRAINT "fk_Department_Manager_emp_no" FOREIGN KEY("emp_no")
-REFERENCES "Employees" ("emp_no");
-
 ALTER TABLE "Department_Emp" ADD CONSTRAINT "fk_Department_Emp_dept_no" FOREIGN KEY("dept_no")
 REFERENCES "Departments" ("dept_no");
 
 ALTER TABLE "Employees" ADD CONSTRAINT "fk_Employees_emp_no" FOREIGN KEY("emp_no")
 REFERENCES "Department_Emp" ("emp_no");
-
-ALTER TABLE "Titles" ADD CONSTRAINT "fk_Titles_emp_no" FOREIGN KEY("emp_no")
-REFERENCES "Employees" ("emp_no");
 
 ALTER TABLE "Salaries" ADD CONSTRAINT "fk_Salaries_emp_no" FOREIGN KEY("emp_no")
 REFERENCES "Employees" ("emp_no");
