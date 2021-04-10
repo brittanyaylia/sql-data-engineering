@@ -42,7 +42,9 @@ SELECT em.emp_no,
 		INNER JOIN "Departments" AS dp ON dp.dept_no = de.dept_no
 		INNER JOIN "Employees" AS em ON de.emp_no = em.emp_no; 
 
+-- 5. List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
 
+SELECT first_name, last_name, sex FROM "Employees" WHERE first_name = 'Hercules' AND last_name like 'B%';
 		
 		
 		
