@@ -30,8 +30,19 @@ SELECT dm.dept_no,
 		INNER JOIN "Departments" AS dp ON dp.dept_no = dm.dept_no
 		INNER JOIN "Employees" AS em ON em.emp_no = dm.emp_no;
 		
+-- 4. List the department of each employee with the following information: employee number, last name, first name, and department name.
+
+SELECT em.emp_no,
+		em.last_name,
+		em.first_name,
+		de.dept_no,
+		dp.dept_name
 		
-		
+		FROM "Department_Emp" AS de
+		INNER JOIN "Departments" AS dp ON dp.dept_no = de.dept_no
+		INNER JOIN "Employees" AS em ON de.emp_no = em.emp_no; 
+
+
 		
 		
 		
